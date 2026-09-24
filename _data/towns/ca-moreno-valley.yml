@@ -1,0 +1,41 @@
+# _data/towns/ca-moreno-valley.yml
+id: ca-moreno-valley
+name: Moreno Valley
+state: CA
+region: southwest
+density_tier: suburban
+population: 208619
+coordinates:
+  lat: 33.9425
+  lng: -117.2297
+criteria:
+  - id: alpr-coverage
+    label: "ALPR (Automated License Plate Reader) density"
+    category: surveillance
+    weight: 4
+    score: 3
+    note: "[PLACEHOLDER] Moderate fixed-reader network reported along major arterials; verify vendor and unit count."
+    source_ids: [1]
+  - id: rtcc-presence
+    label: "Real-Time Crime Center presence"
+    category: surveillance
+    weight: 5
+    score: 2
+    note: "[PLACEHOLDER] No dedicated RTCC identified; county-level data-sharing agreement may apply. Verify."
+    source_ids: [1]
+  - id: nondiscrimination-ordinance
+    label: "Nondiscrimination ordinance coverage"
+    category: inclusivity
+    weight: 5
+    score: 2
+    note: "[PLACEHOLDER] Local ordinance reported to cover orientation and gender identity. Verify current municipal code."
+    source_ids: [2]
+sources:
+  - id: 1
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"
+  - id: 2
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"

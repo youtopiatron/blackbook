@@ -1,0 +1,42 @@
+id: ca-riverside
+name: Riverside
+state: CA
+region: southwest
+density_tier: suburban
+population: 314998
+coordinates:
+  lat: 33.9533
+  lng: -117.3962
+
+criteria:
+  - id: alpr-coverage
+    label: "ALPR (Automated License Plate Reader) density"
+    category: surveillance
+    weight: 4
+    score: 4
+    note: "45 units confirmed, Flock Safety contract."
+    source_ids: [1]
+  - id: rtcc-presence
+    label: "Real-Time Crime Center presence"
+    category: surveillance
+    weight: 5
+    score: 3
+    note: "Active RTCC confirmed via council minutes."
+    source_ids: [1]
+  - id: nondiscrimination-ordinance
+    label: "Nondiscrimination ordinance coverage"
+    category: inclusivity
+    weight: 5
+    score: 3
+    note: "Covers orientation and gender identity; no immigration-status protection."
+    source_ids: [2]
+
+sources:
+  - id: 1
+    title: "City Council Minutes"
+    type: public-record
+    url: "https://example.org/doc"
+  - id: 2
+    title: "Riverside Municipal Code, Section 5.20"
+    type: legal-code
+    url: "https://example.org/code"

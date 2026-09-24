@@ -1,0 +1,34 @@
+# _data/towns/ca-redlands.yml
+id: ca-redlands
+name: Redlands
+state: CA
+region: southwest
+density_tier: small-town
+population: 71513
+coordinates:
+  lat: 34.0556
+  lng: -117.1825
+criteria:
+  - id: alpr-coverage
+    label: "ALPR (Automated License Plate Reader) density"
+    category: surveillance
+    weight: 4
+    score: 3
+    note: "[PLACEHOLDER] Moderate fixed-reader deployment reported downtown and at city boundaries. Verify vendor and unit count."
+    source_ids: [1]
+  - id: nondiscrimination-ordinance
+    label: "Nondiscrimination ordinance coverage"
+    category: inclusivity
+    weight: 5
+    score: 2
+    note: "[PLACEHOLDER] Local ordinance reported to cover most protected classes. Verify current municipal code."
+    source_ids: [2]
+sources:
+  - id: 1
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"
+  - id: 2
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"

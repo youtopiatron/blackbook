@@ -1,0 +1,41 @@
+# _data/towns/ca-corona.yml
+id: ca-corona
+name: Corona
+state: CA
+region: southwest
+density_tier: suburban
+population: 158327
+coordinates:
+  lat: 33.8753
+  lng: -117.5664
+criteria:
+  - id: alpr-coverage
+    label: "ALPR (Automated License Plate Reader) density"
+    category: surveillance
+    weight: 4
+    score: 4
+    note: "[PLACEHOLDER] Dense fixed-reader network reported at freeway ingress points. Verify vendor and unit count."
+    source_ids: [1]
+  - id: rtcc-presence
+    label: "Real-Time Crime Center presence"
+    category: surveillance
+    weight: 5
+    score: 3
+    note: "[PLACEHOLDER] Active or in-development RTCC reported. Verify current status."
+    source_ids: [1]
+  - id: nondiscrimination-ordinance
+    label: "Nondiscrimination ordinance coverage"
+    category: inclusivity
+    weight: 5
+    score: 3
+    note: "[PLACEHOLDER] Partial local coverage reported. Verify current municipal code."
+    source_ids: [2]
+sources:
+  - id: 1
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"
+  - id: 2
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"

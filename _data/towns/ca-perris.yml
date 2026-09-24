@@ -1,0 +1,34 @@
+# _data/towns/ca-perris.yml
+id: ca-perris
+name: Perris
+state: CA
+region: southwest
+density_tier: small-town
+population: 78895
+coordinates:
+  lat: 33.7825
+  lng: -117.2286
+criteria:
+  - id: alpr-coverage
+    label: "ALPR (Automated License Plate Reader) density"
+    category: surveillance
+    weight: 4
+    score: 2
+    note: "[PLACEHOLDER] Limited fixed-reader deployment reported at city entry points; verify vendor and unit count."
+    source_ids: [1]
+  - id: nondiscrimination-ordinance
+    label: "Nondiscrimination ordinance coverage"
+    category: inclusivity
+    weight: 5
+    score: 3
+    note: "[PLACEHOLDER] No standalone local ordinance found; relies on state-level protections. Verify against current municipal code."
+    source_ids: [2]
+sources:
+  - id: 1
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"
+  - id: 2
+    title: "[PLACEHOLDER — replace with verified source]"
+    type: placeholder
+    url: "TODO"

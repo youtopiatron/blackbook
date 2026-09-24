@@ -1,0 +1,31 @@
+<div class="town-grid">
+  {% for key, town in townsComputed %}
+    <div class="town-card tier-{{ town.tier }}">
+      <div class="locality">{{ town.state }} · {{ town.region }} · {{ town.density_tier }}</div>
+      <h3>{{ town.name }}</h3>
+      <span class="tier-badge">{{ town.tier | upper }}</span>
+
+      {% if town.tier_basis == "peer-relative" %}
+        <p class="percentile">Worse than {{ (town.peer_percentile * 100) | round }}% of {{ town.peer_group_size }} density/region-matched peers.</p>
+      {% else %}
+        <p class="percentile">Absolute score only — peer group too small ({{ town.peer_group_size }}) for a relative comparison yet.</p>
+      {% endif %}
+      <p class="confidence">Confidence: {{ town.confidence }} ({{ town.n_sources }} sourced criteria)</p>
+
+      <h4>Criteria</h4>
+      <ul class="criteria-list">
+        {% for c in town.criteria %}
+          <li><strong>{{ c.label }}</strong> — {{ c.score }}/5 &times; w{{ c.weight }}
+            <br><span class="note">{{ c.note }}</span></li>
+        {% endfor %}
+      </ul>
+
+      <h4>Sources</h4>
+      <ul class="sources-list">
+        {% for s in town.sources %}
+          <li><a href="{{ s.url }}">{{ s.title }}</a> <span class="type">— {{ s.type }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
